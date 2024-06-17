@@ -1,8 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+
 export default function App() {
   return (
     <div>
-      <h1>My App</h1>
-      <p>My App is running!</p>
+      <>
+      <Navbar />
+      <Routes>
+      <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+      </>
     </div>
-  );
+      )
 }
